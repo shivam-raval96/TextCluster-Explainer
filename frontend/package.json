@@ -1,58 +1,26 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
-  "homepage": "https://neuraldoodles.github.io/TextCluster-Explainer",
-  "private": false,
+  "name": "textcluster-explainer",
+  "version": "1.0.0",
+  "homepage": "https://shivam-raval96.github.io/TextCluster-Explainer",
   "dependencies": {
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
-    "@fil/lasso-selection-canvas": "https://api.observablehq.com/@fil/lasso-selection-canvas.tgz?v=3",
-    "@fortawesome/fontawesome-svg-core": "^6.4.0",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.12.2",
-    "@mui/styled-engine-sc": "^5.12.0",
-    "@observablehq/runtime": "^5.6.1",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.4.0",
-    "bootstrap": "^5.3.2",
-    "d3": "^7.8.4",
-    "d3-cloud": "^1.2.5",
-    "d3-lasso": "^0.0.5",
-    "d3-quadtree": "^3.0.1",
-    "gh-pages": "^2.0.1",
-    "plotly.js": "^2.22.0",
-    "pub-sub-es": "^2.0.1",
+    "axios": "^1.6.0",
+    "d3": "^7.9.0",
+    "d3-cloud": "^1.2.9",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.7.4",
-    "react-d3-cloud": "^1.0.6",
     "react-dom": "^18.2.0",
-    "react-plotly.js": "^2.6.0",
-    "react-router-dom": "^6.10.0",
-    "react-scripts": "^5.0.1",
-    "regl": "^2.1.0",
-    "regl-scatterplot": "^1.6.6",
-    "styled-components": "^5.3.10",
-    "web-vitals": "^2.1.4",
-    "wordcloud": "^1.2.2"
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build:static": "REACT_APP_STATIC_MODE=true react-scripts build",
+    "predeploy": "npm run build:static",
+    "deploy": "gh-pages -d build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
+  "proxy": "http://localhost:5001",
   "browserslist": {
     "production": [
       ">0.2%",
